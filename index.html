@@ -8,45 +8,85 @@
 <style>
     body {
         margin: 0;
-        font-family: Arial, sans-serif;
-        background: #ffffff;
-        color: #111;
-        line-height: 1.6;
+        font-family: 'Segoe UI', sans-serif;
+        background: #f9fafb;
+        color: #111827;
+        line-height: 1.7;
     }
 
     header {
-        padding: 60px 20px;
-        max-width: 900px;
-        margin: auto;
+        background: linear-gradient(135deg, #2563eb, #1e40af);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
     }
 
-    h1 {
-        margin-bottom: 10px;
-        font-size: 32px;
+    header h1 {
+        margin: 0;
+        font-size: 36px;
+        letter-spacing: 1px;
     }
 
     .subtitle {
-        color: #555;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        font-size: 18px;
+        opacity: 0.9;
+    }
+
+    .links {
+        margin-top: 20px;
     }
 
     .links a {
-        margin-right: 15px;
-        text-decoration: none;
+        display: inline-block;
+        margin: 8px;
+        padding: 8px 16px;
+        background: white;
         color: #2563eb;
-        font-weight: 500;
+        border-radius: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+    .links a:hover {
+        background: #e0e7ff;
+        transform: translateY(-2px);
     }
 
     section {
         max-width: 900px;
-        margin: auto;
-        padding: 40px 20px;
-        border-top: 1px solid #e5e7eb;
+        margin: 50px auto;
+        padding: 0 20px;
     }
 
     h2 {
-        font-size: 20px;
-        margin-bottom: 15px;
+        font-size: 22px;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    h2::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: #2563eb;
+        margin-top: 6px;
+        border-radius: 2px;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        transition: 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
     }
 
     ul {
@@ -54,25 +94,22 @@
     }
 
     .project {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
 
     footer {
-        max-width: 900px;
-        margin: auto;
+        text-align: center;
         padding: 40px 20px;
-        border-top: 1px solid #e5e7eb;
+        background: #111827;
+        color: #9ca3af;
         font-size: 14px;
-        color: #555;
+        margin-top: 60px;
     }
 
-    a {
-        color: #2563eb;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 28px;
+        }
     }
 
 </style>
@@ -87,7 +124,7 @@
     </div>
 
     <div class="links">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanvinallapu@email.com" target="_blank">Email</a>
+        <a href="mailto:tanvinallapu@email.com">Email</a>
         <a href="https://github.com/23R01A05B1" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/tanvi-nallapu-191107355" target="_blank">LinkedIn</a>
     </div>
@@ -95,61 +132,63 @@
 
 <section>
     <h2>About</h2>
-    <p>
+    <div class="card">
         Software-focused Computer Science student with strong fundamentals in Java, Python, and SQL.
         Built AI-driven and full-stack applications using Machine Learning, NLP, Flask, and React.
         Interested in building scalable backend systems and real-world software products.
-    </p>
+    </div>
 </section>
 
 <section>
     <h2>Technical Skills</h2>
-    <p>
+    <div class="card">
         <strong>Languages:</strong> Java, Python, C <br>
         <strong>Web:</strong> HTML, CSS, JavaScript, React.js <br>
         <strong>Frameworks:</strong> Flask, Django <br>
         <strong>Database:</strong> SQL <br>
         <strong>Concepts:</strong> OOPS, Machine Learning, NLP <br>
         <strong>Tools:</strong> Git, GitHub
-    </p>
+    </div>
 </section>
 
 <section>
     <h2>Projects</h2>
+    <div class="card">
 
-    <div class="project">
-        <strong>AI Crop Advisor</strong>
-        <ul>
-            <li>Designed ML models (Random Forest, Decision Tree) for crop prediction</li>
-            <li>Built full-stack system using Flask (backend) and React (frontend)</li>
-            <li>Integrated weather-based input for real-time recommendations</li>
-            <li>Focused on performance and prediction accuracy</li>
-        </ul>
+        <div class="project">
+            <strong>AI Crop Advisor</strong>
+            <ul>
+                <li>Designed ML models (Random Forest, Decision Tree) for crop prediction</li>
+                <li>Built full-stack system using Flask and React</li>
+                <li>Integrated real-time weather-based inputs</li>
+                <li>Optimized model performance and prediction accuracy</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <strong>Finance GPT</strong>
+            <ul>
+                <li>Developed NLP-based financial assistant</li>
+                <li>Implemented Flask API for query processing</li>
+                <li>Handled budgeting and investment queries</li>
+                <li>Optimized response handling for real-time interaction</li>
+            </ul>
+        </div>
+
     </div>
-
-    <div class="project">
-        <strong>Finance GPT</strong>
-        <ul>
-            <li>Developed NLP-based financial assistant</li>
-            <li>Implemented Flask API for query processing</li>
-            <li>Handled user inputs related to budgeting and investments</li>
-            <li>Optimized response handling for real-time interaction</li>
-        </ul>
-    </div>
-
 </section>
 
 <section>
     <h2>Education</h2>
-    <p>
+    <div class="card">
         <strong>B.Tech – Computer Science Engineering</strong><br>
         CMR Institute of Technology (2023–2027)<br>
         CGPA: 8.58 / 10
-    </p>
+    </div>
 </section>
 
 <footer>
-    © 2026 Nallapu Tanvi
+    © 2026 Nallapu Tanvi | Open to Internship & Fresher Opportunities
 </footer>
 
 </body>
