@@ -7,19 +7,19 @@
 
 <style>
     :root {
-        --primary: #0f172a;       /* Deep Navy */
-        --accent: #2563eb;        /* Professional Blue */
-        --light-bg: #f1f5f9;      /* Soft Background */
+        --primary: #0f172a;
+        --accent: #3b82f6;
+        --bg-gradient: linear-gradient(135deg, #eef2ff, #f8fafc);
         --card-bg: #ffffff;
-        --text-dark: #1e293b;
+        --text-main: #1e293b;
         --text-light: #64748b;
     }
 
     body {
         margin: 0;
         font-family: 'Segoe UI', sans-serif;
-        background: var(--light-bg);
-        color: var(--text-dark);
+        background: var(--bg-gradient);
+        color: var(--text-main);
         line-height: 1.7;
     }
 
@@ -27,81 +27,81 @@
     header {
         background: var(--primary);
         color: white;
-        padding: 90px 20px 70px;
+        padding: 100px 20px 80px;
         text-align: center;
+        position: relative;
     }
 
     header h1 {
         margin: 0;
-        font-size: 38px;
+        font-size: 40px;
         letter-spacing: 1px;
     }
 
     .subtitle {
-        margin-top: 12px;
+        margin-top: 15px;
         font-size: 18px;
         color: #cbd5e1;
     }
 
-    /* CONTACT BUTTONS */
     .links {
         margin-top: 30px;
     }
 
     .links a {
         display: inline-block;
-        margin: 8px;
-        padding: 10px 20px;
+        margin: 10px;
+        padding: 12px 22px;
+        border-radius: 30px;
         background: var(--accent);
         color: white;
-        border-radius: 30px;
-        font-weight: 500;
         text-decoration: none;
+        font-weight: 500;
         transition: 0.3s ease;
-        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
     }
 
     .links a:hover {
-        background: #1d4ed8;
-        transform: translateY(-3px);
+        background: #2563eb;
+        transform: translateY(-4px);
     }
 
     /* SECTIONS */
     section {
-        max-width: 950px;
-        margin: 70px auto;
-        padding: 0 20px;
+        max-width: 1000px;
+        margin: 80px auto;
+        padding: 0 25px;
     }
 
     h2 {
-        font-size: 24px;
-        margin-bottom: 25px;
+        font-size: 26px;
+        margin-bottom: 30px;
         position: relative;
     }
 
     h2::after {
         content: "";
         position: absolute;
+        bottom: -10px;
         left: 0;
-        bottom: -8px;
-        width: 60px;
+        width: 70px;
         height: 4px;
         background: var(--accent);
-        border-radius: 2px;
+        border-radius: 3px;
     }
 
-    /* CARD STYLE */
+    /* CARD */
     .card {
         background: var(--card-bg);
-        padding: 35px;
-        border-radius: 16px;
-        box-shadow: 0 15px 35px rgba(15, 23, 42, 0.06);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
         transition: 0.3s ease;
     }
 
     .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+        transform: translateY(-8px);
+        box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
     }
 
     ul {
@@ -114,30 +114,31 @@
 
     strong {
         color: var(--primary);
+        font-size: 18px;
     }
 
     /* FOOTER */
     footer {
+        text-align: center;
+        padding: 50px 20px;
         background: var(--primary);
         color: #94a3b8;
-        text-align: center;
-        padding: 45px 20px;
-        margin-top: 80px;
+        margin-top: 100px;
         font-size: 14px;
     }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
         header h1 {
-            font-size: 28px;
-        }
-
-        section {
-            margin: 50px auto;
+            font-size: 30px;
         }
 
         .card {
             padding: 25px;
+        }
+
+        section {
+            margin: 60px auto;
         }
     }
 
@@ -149,7 +150,7 @@
 <header>
     <h1>Nallapu Tanvi</h1>
     <div class="subtitle">
-        Computer Science Engineering Student 
+        Computer Science Engineering Student
     </div>
 
     <div class="links">
@@ -162,9 +163,9 @@
 <section>
     <h2>About</h2>
     <div class="card">
-        Software-focused Computer Science student with strong fundamentals in Java, Python, and SQL.
+        Software-focused Computer Science student with strong foundations in Java, Python, and SQL.
         Built AI-driven and full-stack applications using Machine Learning, NLP, Flask, and React.
-        Interested in building scalable backend systems and real-world software products.
+        Interested in building scalable backend systems and impactful real-world software products.
     </div>
 </section>
 
@@ -187,10 +188,9 @@
         <div class="project">
             <strong>AI Crop Advisor</strong>
             <ul>
-                <li>Designed ML models (Random Forest, Decision Tree) for crop prediction</li>
+                <li>Designed ML models for crop prediction</li>
                 <li>Built full-stack system using Flask and React</li>
-                <li>Integrated real-time weather-based inputs</li>
-                <li>Optimized model performance and prediction accuracy</li>
+                <li>Integrated weather-based real-time recommendations</li>
             </ul>
         </div>
 
@@ -198,8 +198,7 @@
             <strong>Finance GPT</strong>
             <ul>
                 <li>Developed NLP-based financial assistant</li>
-                <li>Implemented Flask API for query processing</li>
-                <li>Handled budgeting and investment queries</li>
+                <li>Implemented backend API using Flask</li>
                 <li>Optimized response handling for real-time interaction</li>
             </ul>
         </div>
